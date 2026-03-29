@@ -1,0 +1,59 @@
+Given
+
+n = 600,000 vertices
+average degree = 100
+
+First: finding m (number of edges)
+Every edge connects two vertices, so it contributes 1 to each endpoint's degree. 
+That means if you add up all degrees, every edge gets counted twice:
+
+sum of all degrees = 2m
+n × avg_degree     = 2m
+600,000 × 100      = 2m
+60,000,000         = 2m
+m = 30,000,000
+
+
+(a) Adjacency Matrix
+The matrix has one row and one column per vertex, so it's n × n cells. Each cell is either 
+0 or 1 → 1 bit per cell.
+
+bits  = n × n        = 600,000 × 600,000  = 360,000,000,000 bits
+bytes = bits / 8     = 360,000,000,000 / 8 = 45,000,000,000 bytes
+KB    = bytes / 1024 = 45,000,000,000 / 1024 ≈ 43,945,312 KB
+MB    = KB / 1024    = 43,945,312 / 1024    ≈ 42,915 MB
+GB    = MB / 1024    = 42,915 / 1024        ≈ 41.91 GB
+
+
+
+(b) Incidence (Edge) Matrix
+The matrix has one row per vertex and one column per edge → n × m cells. Again 1 bit per cell.
+
+bits  = n × m        = 600,000 × 30,000,000    = 18,000,000,000,000 bits
+bytes = bits / 8     = 18,000,000,000,000 / 8  = 2,250,000,000,000 bytes
+KB    = bytes / 1024 = 2,250,000,000,000 / 1024 ≈ 2,197,265,625 KB
+MB    = KB / 1024    = 2,197,265,625 / 1024     ≈ 2,145,767 MB
+GB    = MB / 1024    = 2,145,767 / 1024         ≈ 2,095 GB
+TB    = GB / 1024    = 2,095 / 1024             ≈ 2.046 TB
+
+
+
+(c) Adjacency Lists
+Here we store vertex numbers, not bits. So first we figure out how many bytes one 
+vertex number needs:
+
+n = 600,000
+We need to store numbers from 0 to 599,999
+How many bits?  ceil(log₂(600,000)) = ceil(19.19) = 20 bits
+20 bits don't fit in 2 bytes (=16 bits), so we need 3 bytes (=24 bits)
+
+The total number of entries across all lists equals the sum of all degrees = 2m:
+
+total entries = 2m = 2 × 30,000,000 = 60,000,000
+
+So:
+
+bytes = total_entries × bytes_per_entry
+      = 60,000,000 × 3 = 180,000,000 bytes
+KB    = 180,000,000 / 1024 ≈ 175,781 KB
+MB    = 175,781 / 1024     ≈ 171.7 MB

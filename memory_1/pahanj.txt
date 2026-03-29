@@ -1,0 +1,22 @@
+Դիցուք ունենք գրաֆ, որն ունի 6*10^5 գագաթներ: Գագաթների միջին աստիճանը 10^2 է: Որքան
+հիշողություն է անհրաժեշտ այսպիսի գրաֆը պահպանելու համար.
+ա) հարևանության մատրիցի տեսքով
+բ) կցության մատրիցի տեսքով
+գ) հարևան գագաթների ցուցակների միջոցով:
+Հիշեցում. բինար մատրիցի ամեն մի վանդակը պահելու համար անհրաժեշտ է 1 բիթ: 
+Գագաթների ցուցակներում պետք է պահել գագաթի համարը, որը ամբողջ թիվ է, ինչի համար 
+անհրաժեշտ է մեկ կամ մի քանի բայթ կախված գագաթների քանակից: Մեկ բայթը 8 բիթ է: 
+Պատասխանը կարող եք գրել բայթերով կամ ավելի մեծ միավորներով (կիլոբայթ, գիգաբայթ, և այլն):
+
+
+
+
+We have a graph with 6*10^5 vertices. The average degree of the vertices is 10^2. How much 
+memory is needed to store such a graph?
+a) in the form of an adjacency matrix (հարևանության մատրից)
+b) in the form of an edge matrix(կցության մատրից)
+c) through lists of neighboring vertices.(հարևան գագաթների ցուցակներ)
+Reminder: 1 bit is needed to store each cell of a binary matrix. In the lists of vertices, 
+the vertex number must be stored, which is an integer, for which one or more bytes are needed 
+depending on the number of vertices. One byte is 8 bits. You can write the answer in bytes or in 
+larger units (kilobytes, gigabytes, etc.).

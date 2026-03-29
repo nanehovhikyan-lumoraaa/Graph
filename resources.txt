@@ -1,0 +1,15 @@
+https://csacademy.com/app/graph_editor/
+
+https://www.unitconverters.net/data-storage/byte-to-gigabyte.htm
+
+Կառուցել գրաֆ հետևյալ հատկանիշներով.
+ունի 8 գագաթ
+նվազագույն աստիճանը 3 է
+առավելագույն աստիճանը 3 է
+երկկողմանի չէ
+
+Construct a graph with the following properties:
+has 8 vertices
+minimum degree is 3
+maximum degree is 3
+not bipartite

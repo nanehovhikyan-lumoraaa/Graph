@@ -1,0 +1,26 @@
+Given
+
+Memory = 3×10¹³ bytes
+average degree = 100
+bytes per vertex number = 4 (fixed this time, unlike before)
+
+(a) Adjacency Matrixn² bits ≤ memory_in_bits
+n² ≤ 3×10¹³ × 8
+n² ≤ 2.4×10¹⁴
+n  ≤ √(2.4×10¹⁴)
+n  ≤ 15,491,933
+
+(b) Incidence MatrixHere we have two unknowns (n and m), but m depends on n:
+m = n × avg_deg / 2 = n × 100 / 2 = 50nSo:
+n × m bits ≤ memory_in_bits
+n × 50n × bits_per_cell ≤ 3×10¹³ × 8
+50n² ≤ 2.4×10¹⁴
+n²  ≤ 4.8×10¹²
+n   ≤ √(4.8×10¹²)
+n   ≤ 2,190,890
+
+(c) Adjacency Lists2m × bytes_per_entry ≤ memory_in_bytes
+2 × 50n × 4 ≤ 3×10¹³
+400n ≤ 3×10¹³
+n ≤ 3×10¹³ / 400
+n ≤ 75,000,000,000
